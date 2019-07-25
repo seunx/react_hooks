@@ -1,11 +1,14 @@
 import React from 'react';
 import Counter from './components/Counter';
+import Form from './components/Form';
 
 const App = () => {
 	return (
 		<div>
-			<h1>Hello World!</h1>
+			<h2>Hooks Counter</h2>
 			<Counter />
+			<h2>Form Created using Hooks</h2>
+			<Form />
 		</div>
 	);
 };
