@@ -5,7 +5,8 @@ export const Store = createContext({ state: {}, dispatch: () => {} });
 const INITIAL_STATE = {
 	error: null,
 	counter: 0,
-	themeColor: 'red'
+	themeColor: 'red',
+	posts: []
 };
 
 const reducer = (state = INITIAL_STATE, action) => {
@@ -30,9 +31,13 @@ const reducer = (state = INITIAL_STATE, action) => {
 				...state,
 				themeColor: action.payload
 			};
+		case 'getPosts':
+			return {
+				...state,
+				posts: action.payload
+			};
 		default:
-			// throw new Error('not a valid action');
-			return state;
+			throw new Error('not a valid action');
 	}
 };
 
