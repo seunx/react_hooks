@@ -9,7 +9,7 @@ const Posts = () => {
 	// const [pics, setPics] = useState([]);
 	useEffect(() => {
 		axios
-			.get('http://jsonplaceholder.typicode.com/photos/?_limit=5')
+			.get('http://jsonplaceholder.typicode.com/photos/?_limit=4')
 			.then(res => {
 				// setPics(res.data);
 				dispatch({ type: 'getPosts', payload: res.data });
@@ -18,12 +18,14 @@ const Posts = () => {
 	return (
 		<div>
 			<h3>Returns Stuff from json PlaceHolder</h3>
-			{state.posts.map(pic => (
-				<div key={pic.id}>
-					<p>{pic.title}</p>
-					<img src={pic.thumbnailUrl} alt={pic.title} />
-				</div>
-			))}
+			<div className="grid-container">
+				{state.posts.map(pic => (
+					<div key={pic.id}>
+						<p>{pic.title}</p>
+						<img src={pic.thumbnailUrl} alt={pic.title} />
+					</div>
+				))}
+			</div>
 		</div>
 	);
 };

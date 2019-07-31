@@ -4,6 +4,8 @@ import Counter from './components/Counter';
 import Form from './components/Form';
 import Posts from './components/Posts';
 import Modal from './components/Modal';
+import Timer from './components/Timer';
+import Styling from './components/Styling';
 import { Store } from './context';
 
 const App = () => {
@@ -25,6 +27,7 @@ const App = () => {
 			</label>
 			<h2 style={{ color: state.themeColor }}>Hooks Counter</h2>
 			<Counter />
+			<Styling />
 			<h2 style={{ color: state.themeColor }}>Reuseable Modal</h2>
 			<button onClick={() => setModal(!showModal)}>Show Modal</button>
 			{showModal ? (
@@ -36,6 +39,8 @@ const App = () => {
 					</div>
 				</Modal>
 			) : null}
+			<h2 style={{ color: state.themeColor }}>Effect Timer</h2>
+			<Timer />
 			<h2 style={{ color: state.themeColor }}>Form Created using Hooks</h2>
 			<Form />
 			<h2 style={{ color: state.themeColor }}>API call using Hooks</h2>
