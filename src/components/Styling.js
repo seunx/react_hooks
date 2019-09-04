@@ -1,5 +1,5 @@
 import React from 'react';
-import { css, Global } from '@emotion/core';
+import { Global } from '@emotion/core';
 import { greenHeading, globalStyle } from '../styles/index';
 
 const Styling = () => {

@@ -5,7 +5,7 @@ export const Store = createContext({ state: {}, dispatch: () => {} });
 const INITIAL_STATE = {
 	error: null,
 	counter: 0,
-	themeColor: 'red',
+	themeColor: 'limegreen',
 	posts: []
 };
 
