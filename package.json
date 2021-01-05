@@ -31,7 +31,7 @@
 	"dependencies": {
 		"@emotion/babel-preset-css-prop": "^10.0.14",
 		"@emotion/core": "^10.0.14",
-		"axios": "^0.19.0",
+		"axios": "^0.21.1",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6"
 	},
